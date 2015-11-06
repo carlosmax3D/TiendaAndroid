@@ -1,0 +1,267 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Acti1" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/trabajo1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/label_Pedido"
+                    android:id="@+id/label_Pedido"
+                    android:textSize="30dp"
+                    android:textColor="#000000"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Id"
+                    android:id="@+id/label_pedidoId"
+                    android:layout_below="@+id/label_Pedido"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_id"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoId"
+                    android:layout_alignParentRight="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_PiezasMin"
+                    android:id="@+id/label_pedidoPiezasMin"
+                    android:layout_below="@+id/pedido_id"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_id"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_PiezasMin"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="false"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoPiezasMin"
+                    android:layout_alignLeft="@+id/pedido_id"
+                    android:enabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_PiezasMax"
+                    android:id="@+id/label_pedidoPiezasMax"
+                    android:layout_below="@+id/pedido_PiezasMin"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_PiezasMin"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_PiezasMax"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoPiezasMax"
+                    android:layout_alignLeft="@+id/pedido_PiezasMin"
+                    android:editable="false"
+                    android:enabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_CantidadPedir"
+                    android:id="@+id/label_pedidoCantidadPedir"
+                    android:layout_below="@+id/pedido_PiezasMax"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_PiezasMax"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_cantidadPedir"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoCantidadPedir"
+                    android:layout_alignLeft="@+id/pedido_PiezasMax" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Proveedores"
+                    android:id="@+id/label_pedidoProveedor"
+                    android:layout_below="@+id/pedido_cantidadPedir"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_cantidadPedir"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_proveedor"
+                    android:spinnerMode="dialog"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoProveedor"
+                    android:layout_alignLeft="@+id/pedido_cantidadPedir"
+                    android:layout_alignRight="@+id/pedido_cantidadPedir" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_CantidadActual"
+                    android:id="@+id/label_pedidoCantidadActual"
+                    android:layout_below="@+id/pedido_proveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_proveedor"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_cantidadActual"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoCantidadActual"
+                    android:layout_alignLeft="@+id/pedido_proveedor"
+                    android:editable="false"
+                    android:enabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Costo"
+                    android:id="@+id/label_pedidoCosto"
+                    android:layout_below="@+id/pedido_cantidadActual"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/pedido_cantidadActual"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pedido_costo"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_pedidoCosto"
+                    android:layout_alignLeft="@+id/pedido_cantidadActual"
+                    android:editable="false"
+                    android:enabled="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_pedir"
+                    android:id="@+id/boton_pedido"
+                    android:layout_below="@+id/pedido_costo"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/alerta1"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:editable="false"
+                android:enabled="true"
+                android:textSize="21sp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
