@@ -1,4 +1,4 @@
-package com.squareraresoftware.libreria;
+﻿package com.squareraresoftware.libreria;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -634,8 +634,8 @@ public class TiendaDatabase implements Serializable {
         public String consultaMinimos(String mensaje){
             String cadena = "";
             Cursor cur = database.rawQuery("select * from " + ARTICULOS_TABLE_NAME+
-                                           " where "+ColumnArticulos.CANTIDAD+"<"+ColumnArticulos.MINIMO+" or "+
-                                           ColumnArticulos.CANTIDAD+"="+ColumnArticulos.MINIMO , null);
+                                           " where ("+ColumnArticulos.CANTIDAD+"<"+ColumnArticulos.MINIMO+" or "+
+                                           ColumnArticulos.CANTIDAD+"="+ColumnArticulos.MINIMO+") and "+ColumnArticulos.ACTIVO+"=1" , null);
             while (cur.moveToNext()){
                 try {
                     cadena += String.format(mensaje+"\n",String.valueOf(cur.getInt(0)));
