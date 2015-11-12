@@ -1,4 +1,4 @@
-﻿package com.squareraresoftware.libreria;
+package com.squareraresoftware.libreria;
 
 import android.content.ContentValues;
 import android.content.Context;
