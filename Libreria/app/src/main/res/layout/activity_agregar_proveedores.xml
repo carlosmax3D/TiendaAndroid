@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".act1" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/label_AgregarProveedores"
+                    android:id="@+id/textViewagregarProveedores"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/label_IdProveedor"
+                    android:width="150dp"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_below="@+id/textViewagregarProveedores"
+                    android:layout_alignRight="@+id/label_nombre"
+                    android:text="@string/label_Id"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_IdProveedor"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:numeric="integer"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textStyle="normal"
+                    android:width="120dp"
+                    android:text="0"
+                    android:layout_alignTop="@+id/label_IdProveedor"
+                    android:layout_alignRight="@+id/textViewagregarProveedores" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nombreProveedor"
+                    android:id="@+id/label_nombreProveedor"
+                    android:layout_below="@+id/label_IdProveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_nombreProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_nombreProveedor"
+                    android:layout_alignLeft="@+id/agregar_IdProveedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Ciudad"
+                    android:id="@+id/label_CiudadProveedor"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/label_nombreProveedor"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_ciudadProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_CiudadProveedor"
+                    android:layout_alignLeft="@+id/agregar_nombreProveedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Estado"
+                    android:id="@+id/label_estadoProveedor"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/agregar_ciudadProveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_estadoProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_estadoProveedor"
+                    android:layout_alignLeft="@+id/agregar_ciudadProveedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Pais"
+                    android:id="@+id/label_paisProveedor"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/agregar_estadoProveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_paisProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_paisProveedor"
+                    android:layout_alignLeft="@+id/agregar_ciudadProveedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Direccion"
+                    android:id="@+id/label_direccionProveedor"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/agregar_paisProveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_direccionProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_direccionProveedor"
+                    android:layout_alignLeft="@+id/agregar_paisProveedor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Telefono"
+                    android:id="@+id/label_telefonoProveedor"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/agregar_direccionProveedor"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/agregar_telefonoProveedor"
+                    android:textIsSelectable="false"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_telefonoProveedor"
+                    android:layout_alignLeft="@+id/agregar_direccionProveedor" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_agregar"
+                    android:id="@+id/boton_agregarProveedor"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_below="@+id/agregar_telefonoProveedor" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
