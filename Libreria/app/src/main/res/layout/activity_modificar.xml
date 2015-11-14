@@ -1,0 +1,357 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".act1" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Id"
+                    android:id="@+id/label_Id"
+                    android:width="150dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/textViewmodificar"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignRight="@+id/label_nombre" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Id"
+                    android:editable="true"
+                    android:enabled="true"
+                    android:numeric="integer"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textStyle="normal"
+                    android:textAlignment="center"
+                    android:width="120dp"
+                    android:text="0"
+                    android:layout_below="@+id/textViewmodificar"
+                    android:layout_marginLeft="29dp"
+                    android:layout_toRightOf="@+id/label_Id" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nombre"
+                    android:id="@+id/label_nombre"
+                    android:layout_below="@+id/label_Id"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_alignRight="@+id/label_FamiliaId" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_nombre"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_nombre"
+                    android:layout_alignLeft="@+id/modificar_Id" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_FamiliaId"
+                    android:id="@+id/label_FamiliaId"
+                    android:layout_below="@+id/label_nombre"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_alignRight="@+id/label_Marca" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Marca"
+                    android:id="@+id/label_Marca"
+                    android:layout_below="@+id/label_FamiliaId"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_alignRight="@+id/label_Modelo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Modelo"
+                    android:id="@+id/label_Modelo"
+                    android:layout_marginTop="50dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/label_Marca"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Modelo"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_Modelo"
+                    android:layout_alignLeft="@+id/modificar_nombre" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Proveedores"
+                    android:id="@+id/label_Proveedores"
+                    android:layout_marginTop="23dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/modificar_Modelo"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Costo"
+                    android:id="@+id/label_Costo"
+                    android:layout_marginTop="21dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/modificar_Proveedores"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Costo"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:text="0.00"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_Costo"
+                    android:layout_alignLeft="@+id/modificar_Modelo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_UbicacionAlmacen"
+                    android:id="@+id/label_UbicacionAlmacen"
+                    android:layout_marginTop="24dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/modificar_Costo"
+                    android:layout_toLeftOf="@+id/modificar_Id" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_UbicacionAlmacen"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_UbicacionAlmacen"
+                    android:layout_alignLeft="@+id/modificar_Costo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_PiezasMax"
+                    android:id="@+id/label_PiezasMax"
+                    android:layout_below="@+id/label_UbicacionAlmacen"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:width="120dp"
+                    android:textSize="18sp"
+                    android:layout_toLeftOf="@+id/modificar_Id" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_PiezasMax"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_PiezasMax"
+                    android:layout_alignLeft="@+id/modificar_UbicacionAlmacen" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_PiezasMin"
+                    android:id="@+id/label_PiezasMin"
+                    android:layout_below="@+id/label_PiezasMax"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/modificar_Id"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_PiezasMin"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_PiezasMin"
+                    android:layout_alignLeft="@+id/modificar_PiezasMax" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_Cantidad"
+                    android:id="@+id/label_Cantidad"
+                    android:layout_below="@+id/modificar_PiezasMin"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/agregar_Id"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Cantidad"
+                    android:textIsSelectable="false"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:lines="1"
+                    android:editable="true"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_Cantidad"
+                    android:layout_alignLeft="@+id/modificar_PiezasMin" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_consultar"
+                    android:id="@+id/boton_consultar"
+                    android:layout_alignLeft="@+id/label_Activo"
+                    android:layout_marginTop="29dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_modificar"
+                    android:enabled="false"
+                    android:id="@+id/boton_modificar"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/modificarActivo"
+                    android:layout_marginTop="29dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Marca"
+                    android:spinnerMode="dialog"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_Marca"
+                    android:layout_alignLeft="@+id/modificar_nombre"
+                    android:layout_alignRight="@+id/modificar_Modelo" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Familia"
+                    android:width="120dp"
+                    android:layout_alignTop="@+id/label_FamiliaId"
+                    android:layout_alignLeft="@+id/modificar_nombre"
+                    android:layout_alignRight="@+id/modificar_nombre" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/label_Modificar"
+                    android:id="@+id/textViewmodificar"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificar_Proveedores"
+                    android:layout_alignTop="@+id/label_Proveedores"
+                    android:layout_alignLeft="@+id/modificar_Costo"
+                    android:text="@string/ProveedoresSel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Activo"
+                    android:id="@+id/label_Activo"
+                    android:layout_below="@+id/modificar_Cantidad"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="29dp"
+                    android:layout_toLeftOf="@+id/modificar_Id"
+                    android:width="120dp"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modificarActivo"
+                    android:layout_alignTop="@+id/label_Activo"
+                    android:layout_alignRight="@+id/modificar_Cantidad" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
